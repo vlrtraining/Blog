@@ -31,7 +31,7 @@ activte how
 source  vlrvenv/bin/activate
 source vlrvenv/bin/activate
 
-vlrvenv\Scripts\activate.bat
+vlr\Scripts\activate.bat
 type python
 ---colse deactivate
 start
@@ -43,7 +43,7 @@ git ignore file
 git init
 git status
 git add -A
-git commit -m "apps added to settings.py"
+git commit -m "date 12th July 2018"
 runserver now
 git status
 local host
