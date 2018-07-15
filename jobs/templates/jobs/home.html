@@ -56,9 +56,13 @@
             <div class="col-md-4">
 
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="{{job.image.url}}" alt="Card image cap">
+                <img class="card-img-top" src="{{ job.image.url }}" alt="Card image cap">
                 <div class="card-body">
-                  <p class="card-text">{{ job.summary }}.</p>
+                  <p class="card-text">{{ job.summary }}</p>
+                  <p class="card-text">FacultyName:{{ job.facultyname }}</p>
+                  <div class="btn-group">
+                    <a href="{{ job.url1}}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Visit Now</a>
+                    </div>
 
                 </div>
               </div>
