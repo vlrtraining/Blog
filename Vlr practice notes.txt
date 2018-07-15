@@ -242,3 +242,26 @@ and in paragraph
 {{ job.summary }}
 src="{{job.image.url}}
 
+
+
+{{job.image.url}}
+
+{{ job.url1 }}
+------------
+adposts
+path('posts/', include('posts.urls'))
+
+in posts app
+create urls.py
+
+
+in views.py
+create function
+--------------
+create summary of text
+models
+def summary(self):
+return self.body[:100]
+
+def sdate(self):
+return self.pub_date.strftime(' %b %e %Y')
