@@ -9,7 +9,7 @@
     <meta name="author" content="">
 
 
-    <title>vlrtraining django project</title>
+    <title>{{post.title}}</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
@@ -40,39 +40,19 @@
 
       <section class="jumbotron text-center">
         <div class="container">
-          <h1 class="jumbotron-heading">Welcome to vlrtraining</h1>
-          <p class="lead text-muted">Djong0 blog project webapplication training videos in telugut .</p>
-          <p><img src="{% static 'praveen gubbala.JPG' %}" />
-            <br />
-            <a href="mailto:ramesh.vch@gmail.com" class="btn btn-primary my-2">Mail Me</a>
+          <h1 class="jumbotron-heading">vlrtraining posts</h1>
 
-          </p>
         </div>
       </section>
 
-      <div class="album py-5 bg-light">
-        <div class="container">
 
-          <div class="row">
-            {% for job in jobs.all %}
-            <div class="col-md-4">
+      <hr />
 
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="{{ job.image.url }}" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">{{ job.summary }}</p>
-                  <p class="card-text">FacultyName:{{ job.facultyname }}</p>
-                  <div class="btn-group">
-                    <a href="{{ job.url1}}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Visit Now</a>
-                    </div>
+      <h1><a href="http://127.0.0.1:8000/posts/{{posts.pk}}" > {{post.title}} </a> </h1>
+      <p>{{post.sdate}}</p>
+      <img src="{{post.image.url}} " />
+      <p>{{post.body}}</p>
 
-                </div>
-              </div>
-            </div>
-            {% endfor %}
-          </div>
-        </div>
-      </div>
 
     </main>
 

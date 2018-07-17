@@ -265,3 +265,59 @@ return self.body[:100]
 
 def sdate(self):
 return self.pub_date.strftime(' %b %e %Y')
+def __str__(self):
+return self.title
+-----------------------
+blog urls.py
+
+
+path('<int:blog_id>/',views.detail,name='detail')
+views.py
+
+from d.s im re ,get_object_or_404
+def detail(request,blog_id):
+p=get_object_or_404(blog,pk=blog_id)
+
+return render(request,'posts/detail.html',{'post':p})
+create dtrtail.html
+-----
+work with static files
+create static folder in blog
+
+in settings
+STATICFILES_DIRS =[
+os.path.join(BASE_DIR, 'blogs/static/')
+]
+
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_URL = '/static/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+MEDIA_URL = '/media/'
+-------------
+create static
+paython manage.py collectstatic
+
+in html file
+{% load staticfiles %}
+{% static 'Angular.pdf'}
+------------
+{ % url 'home'
+https://www.vlrtraining.in/
+allpsost
+{% url 'allposts"%}
+change title
+goto post page
+
+for post links
+href{% url 'detail' blog.id
+
+
+
+
+
+
+
+
+
