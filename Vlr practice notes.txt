@@ -306,12 +306,13 @@ in html file
 { % url 'home'
 https://www.vlrtraining.in/
 allpsost
-{% url 'allposts"%}
+{% url 'allposts'%}
 change title
 goto post page
 
 for post links
 href{% url 'detail' blog.id
+{blog.title} ffor
 
 
 
